@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <generator>NFE/5.0</generator>
+    <title>"인공지능" - Google 뉴스</title>
+    <link>https://news.google.com/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5&amp;hl=ko&amp;gl=KR&amp;ceid=KR:ko</link>
+    <language>ko</language>
+    <webMaster>news-webmaster@google.com</webMaster>
+    <copyright>2026 Google Inc.</copyright>
+    <lastBuildDate>Sun, 23 Aug 2026 05:00:00 GMT</lastBuildDate>
+    <description>Google 뉴스</description>
+    <item>
+      <title>AI 기술 발전, 산업 전반에 영향 - 조선일보</title>
+      <link>https://news.google.com/rss/articles/CBMiAAAA1?oc=5</link>
+      <guid isPermaLink="false">abcdef123456</guid>
+      <pubDate>Sun, 23 Aug 2026 04:30:00 GMT</pubDate>
+      <description>&lt;a href="https://news.google.com/rss/articles/CBMiAAAA1?oc=5"&gt;AI 기술 발전, 산업 전반에 영향&lt;/a&gt;&amp;nbsp;&amp;nbsp;조선일보</description>
+      <source url="https://www.chosun.com">조선일보</source>
+    </item>
+    <item>
+      <title>정부, AI 규제 가이드라인 발표 - 한겨레</title>
+      <link>https://news.google.com/rss/articles/CBMiAAAA2?oc=5</link>
+      <guid isPermaLink="false">abcdef123457</guid>
+      <pubDate>Sun, 23 Aug 2026 03:15:00 GMT</pubDate>
+      <description>&lt;a href="https://news.google.com/rss/articles/CBMiAAAA2?oc=5"&gt;정부, AI 규제 가이드라인 발표&lt;/a&gt;&amp;nbsp;&amp;nbsp;한겨레</description>
+      <source url="https://www.hani.co.kr">한겨레</source>
+    </item>
+    <item>
+      <title>스타트업 투자 동향, AI 분야 강세 - 매경</title>
+      <link>https://news.google.com/rss/articles/CBMiAAAA3?oc=5</link>
+      <guid isPermaLink="false">abcdef123458</guid>
+      <pubDate>Sat, 22 Aug 2026 23:50:00 GMT</pubDate>
+      <description>&lt;a href="https://news.google.com/rss/articles/CBMiAAAA3?oc=5"&gt;스타트업 투자 동향, AI 분야 강세&lt;/a&gt;&amp;nbsp;&amp;nbsp;매경</description>
+      <source url="https://www.mk.co.kr">매경</source>
+    </item>
+  </channel>
+</rss>
