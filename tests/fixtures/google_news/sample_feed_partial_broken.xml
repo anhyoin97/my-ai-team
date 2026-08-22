@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <generator>NFE/5.0</generator>
+    <title>"인공지능" - Google 뉴스</title>
+    <link>https://news.google.com/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5&amp;hl=ko&amp;gl=KR&amp;ceid=KR:ko</link>
+    <language>ko</language>
+    <webMaster>news-webmaster@google.com</webMaster>
+    <copyright>2026 Google Inc.</copyright>
+    <lastBuildDate>Sun, 23 Aug 2026 05:00:00 GMT</lastBuildDate>
+    <description>Google 뉴스</description>
+    <item>
+      <title>정상 기사 - link와 title 모두 있음</title>
+      <link>https://news.google.com/rss/articles/CBMiAAAA1?oc=5</link>
+      <guid isPermaLink="false">abcdef123456</guid>
+      <pubDate>Sun, 23 Aug 2026 04:30:00 GMT</pubDate>
+      <description>정상 기사입니다.</description>
+      <source url="https://www.chosun.com">조선일보</source>
+    </item>
+    <item>
+      <link>https://news.google.com/rss/articles/CBMiAAAA2?oc=5</link>
+      <guid isPermaLink="false">abcdef123457</guid>
+      <pubDate>Sun, 23 Aug 2026 03:15:00 GMT</pubDate>
+      <description>title이 없는 깨진 항목입니다.</description>
+      <source url="https://www.hani.co.kr">한겨레</source>
+    </item>
+    <item>
+      <title>link가 없는 깨진 항목</title>
+      <guid isPermaLink="false">abcdef123458</guid>
+      <pubDate>Sat, 22 Aug 2026 23:50:00 GMT</pubDate>
+      <description>link가 없는 깨진 항목입니다.</description>
+      <source url="https://www.mk.co.kr">매경</source>
+    </item>
+    <item>
+      <title>published가 없는 항목 - 정상 처리되어야 함</title>
+      <link>https://news.google.com/rss/articles/CBMiAAAA4?oc=5</link>
+      <guid isPermaLink="false">abcdef123459</guid>
+      <description>pubDate가 없는 항목입니다.</description>
+      <source url="https://www.mk.co.kr">매경</source>
+    </item>
+  </channel>
+</rss>
