@@ -1,0 +1,26 @@
+sources:
+  hackernews:
+    enabled: true
+    feed_url: "https://hnrss.org/frontpage"
+  google_news:
+    enabled: true
+    keywords:
+      - "Claude"
+      - "LLM 에이전트"
+      - "AI"
+      - "AI 혁신"
+
+scoring:
+  keywords:
+    - "Claude"
+    - "LLM 에이전트"
+    - "AI"
+    - "AI 혁신"
+  threshold: 1.0
+
+digest:
+  output_dir: "output/digests"
+  title: "주간 다이제스트"
+
+storage:
+  db_path: "data/history.db"
