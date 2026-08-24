@@ -1,9 +1,0 @@
-README.md
-pyproject.toml
-src/collector/__init__.py
-src/collector/adapters/__init__.py
-src/my_ai_team.egg-info/PKG-INFO
-src/my_ai_team.egg-info/SOURCES.txt
-src/my_ai_team.egg-info/dependency_links.txt
-src/my_ai_team.egg-info/requires.txt
-src/my_ai_team.egg-info/top_level.txt
