@@ -32,6 +32,7 @@ class NormalizedItem(BaseModel):
     summary: str = ""
     keywords_matched: list[str] = Field(default_factory=list)
     score: float = 0.0
+    thumbnail_url: str | None = None
 
     @classmethod
     def from_raw(cls, raw: RawItem) -> NormalizedItem:

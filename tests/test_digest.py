@@ -82,6 +82,35 @@ def test_summary_is_truncated_and_included():
     assert "가" * 120 in markdown
 
 
+def test_thumbnail_rendered_for_items_with_and_without_it():
+    with_thumb = make_item(
+        title="썸네일 있는 항목",
+        score=2.0,
+        url="https://example.com/with-thumb",
+        source="hackernews",
+        thumbnail_url="https://example.com/thumb.jpg",
+        summary="",
+    )
+    without_thumb = make_item(
+        title="썸네일 없는 항목",
+        score=1.0,
+        url="https://example.com/without-thumb",
+        source="google_news",
+        summary="",
+    )
+
+    markdown = render_digest_markdown(
+        [with_thumb, without_thumb], generated_at=datetime(2026, 8, 24)
+    )
+
+    expected = (
+        "1. [썸네일 있는 항목](https://example.com/with-thumb) — hackernews\n"
+        "   ![](https://example.com/thumb.jpg)\n"
+        "2. [썸네일 없는 항목](https://example.com/without-thumb) — google_news"
+    )
+    assert expected in markdown
+
+
 def test_write_digest_file_creates_directory_and_file(tmp_path: Path):
     output_dir = tmp_path / "digests"
     markdown = "# 다이제스트\n\n내용\n"

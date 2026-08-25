@@ -13,7 +13,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from collector import dedupe, digest, scoring, storage
+from collector import dedupe, digest, scoring, storage, thumbnail
 from collector.adapters.base import SourceAdapter
 from collector.adapters.google_news import GoogleNewsAdapter
 from collector.adapters.hackernews import HackerNewsAdapter
@@ -78,6 +78,13 @@ def run(config: AppConfig) -> str:
         )
         print(f"점수화 통과: {len(scored_items)}건")
         _report("working", f"점수화 완료: {len(scored_items)}건")
+
+        _report("working", "썸네일 조회 중")
+        scored_items = [
+            item.model_copy(update={"thumbnail_url": thumbnail.fetch_thumbnail_url(item.url)})
+            for item in scored_items
+        ]
+        _report("working", "썸네일 조회 완료")
 
         generated_at = datetime.now(timezone.utc)
         markdown = digest.render_digest_markdown(scored_items, generated_at, config.digest.title)
