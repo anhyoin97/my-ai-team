@@ -80,10 +80,15 @@ def run(config: AppConfig) -> str:
         _report("working", f"점수화 완료: {len(scored_items)}건")
 
         _report("working", "썸네일 조회 중")
-        scored_items = [
-            item.model_copy(update={"thumbnail_url": thumbnail.fetch_thumbnail_url(item.url)})
-            for item in scored_items
-        ]
+        resolved_items = []
+        for item in scored_items:
+            lookup = thumbnail.fetch_thumbnail(item.url)
+            resolved_items.append(
+                item.model_copy(
+                    update={"url": lookup.resolved_url, "thumbnail_url": lookup.thumbnail_url}
+                )
+            )
+        scored_items = resolved_items
         _report("working", "썸네일 조회 완료")
 
         generated_at = datetime.now(timezone.utc)
