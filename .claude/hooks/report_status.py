@@ -1,8 +1,8 @@
 """Claude Code 훅 이벤트를 받아 공유 status.json에 에이전트 상태를 기록한다."""
-import fcntl
 import json
 import sys
-from datetime import datetime, timezone
+
+from status_store import write_status
 
 
 def main() -> None:
@@ -31,22 +31,7 @@ def main() -> None:
     else:
         status, detail = "unknown", event
 
-    entry = {
-        "status": status,
-        "detail": detail,
-        "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-    }
-
-    with open(status_file, "a+") as f:
-        fcntl.flock(f, fcntl.LOCK_EX)
-        f.seek(0)
-        raw = f.read()
-        data = json.loads(raw) if raw.strip() else {}
-        data[agent_id] = entry
-        f.seek(0)
-        f.truncate()
-        json.dump(data, f, ensure_ascii=False, indent=2)
-        fcntl.flock(f, fcntl.LOCK_UN)
+    write_status(status_file, agent_id, status, detail)
 
 
 if __name__ == "__main__":
