@@ -27,6 +27,8 @@ def render_digest_markdown(
     for index, item in enumerate(sorted_items, start=1):
         summary = item.summary[:_SUMMARY_MAX_LENGTH]
         lines.append(f"{index}. [{item.title}]({item.url}) — {item.source}")
+        if item.thumbnail_url:
+            lines.append(f"   ![]({item.thumbnail_url})")
         if summary:
             lines.append(f"   {summary}")
 
